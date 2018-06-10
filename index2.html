@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style2.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<title>givBox | home</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<header>
+<nav>
+<div class="ul">
+<ul class="menu">
+<li><a href="support.html">Помощь</a></li>
+<li><a href="about us.html">О нас</a></li>
+<li><a href="index2.html">Домой</a></li>
+<li><a href="index.html" class="logo"><div id="logo" title="Замена цвета"></div></a></li>
+<li><a href="#">Друзья</a></li>
+<li><a href="#">Сообщения</a></li>
+<li><a href="game2.html">Игры</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="gs1">
+    <div class="text-1"><h1 class="h1">Разработан разработчиками для разработчиков!</h1><br>
+       <p class="p1">GivBox - это онлайн-сервис, на котором начинающие разработчики могут улучшить и распространить свой продукт.</p>
+    </div>
+    <!-- Кнопка активации входа -->
+<div class="chop">
+<label class="btn1" for="modal-2">Регистрация</label>
+<label class="btn" for="modal-1">Вход</label>
+</div>
+<!-- Модальное окно -->
+<div class="modal">
+  <input class="modal-open" id="modal-1" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Вход</h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <form action="login.php" method="POST" class="do_login" style="text-align: center;">
+    <p>
+      <p class="login">Логин</p>
+        <input type="text" name="login" placeholder="Введите логин">
+    </p><br>
+    <p>
+      <p class="login">Пароль</p>
+        <input type="password" name="password" placeholder="Введите пароль">
+    </p><br>
+    <button type="submit" name="do_login" for="modal-1" class="login">Войти</button></form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно -->
+<div class="modal">
+  <input class="modal-open" id="modal-2" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-2"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Авторизация</h2>
+        <label class="btn-close" for="modal-2" aria-hidden="true">×</label>
+      </div>
+      <div class="modal-body">
+        <form action="signup.php" method="POST" class="signup1" style="text-align: center;">
+        <p>
+            <p class="login">Логин</p>
+            <input type="text" name="login" placeholder="Введите логин">
+        </p><br>
+        <p>
+            <p class="login">Email</p>
+            <input type="email" name="email" placeholder="Введите email">
+        </p><br>
+        <p>
+            <p class="login">Пароль</p>
+            <input type="password" name="password" placeholder="Введите пароль">
+        </p><br>
+        <p>
+            <p class="login">Повторный пароль</p>
+            <input type="password" name="password_2" placeholder="Введите пароль повторно">
+        </p><br>
+        <button type="submit" name="do_signup">Зарегестрироваться</button>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>  
+</div>
+<div class="gss1">
+  <div class="chit"><img src="images/chit.png" class="chit" height="150px" width="150px"></div><br><br><br>
+  <div class="ima"><h2>Нил Армстронг</h2>
+  <p>"Это один маленький шаг для человека и огромный скачок для человечества."</p><br>
+  <p class="italic">Эти слова произнес Армстронг, когда впервые ступил на Луну 20 июля 1969 года.</p>
+</div>
+</div>
+<div class="team">
+  <h2 class="team_text">Обратите внимание на замену цвета!</h2>
+  <p class="team_text">На нашем сервисе вы можете заменить цвет, нажав на логотип</p>
+</div>
+  <div class="services">
+  <h2 class="services_text_h2">Наши услуги</h2><br><br><br><br><br><br>
+  <div class="services_img1"></div>
+  <span class="services_text_p1">
+  <h2>Размещение</h2>
+  <p align="left" class="left">Мы предоставляем вам бесплатное размещение своих наработок в интернете.</p>
+  </span>
+  <span class="services_text_p1">
+  <h2>Комментарии очень полезны</h2>
+  <p align="left" class="left">При помощи комментариев, другие люди могут оценить ваш проект, дать вам замечания и подсказки.</p>
+  </span>
+  <span class="services_text_p1">
+  <h2>Найдите свою команду</h2>
+  <p align="left" class="left">Наш сервис предоставляет вам возможность найти свою идеальную команду. С командой вы выйдете на новый уровень!</p>
+  </span>
+</div> 
+<hr>
+</body>
+</html>
+<script>
+    <?php
+  requere "db.php";?>    
+ </script>

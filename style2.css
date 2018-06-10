@@ -1,0 +1,438 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body {
+	background: #101010;
+}
+nav {
+	background: #1a1a1a;
+    position: relative;
+    overflow:hidden;
+    height:43px;
+}
+nav:before {
+	content:'';
+	display: block;
+	height:43px;
+	width:100%;
+	background: #2c2c2c; 
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	top:0;
+}
+ul{
+	list-style:none;
+    margin:0;
+    padding:0;
+    position: relative;
+    left:50%;
+    float:left;
+    height:43px
+}
+
+ul li {
+	position:relative;
+    left:-50%;
+    float:left;
+    margin:0 10px;
+    height:43px
+}
+
+ul li a {
+	color:#f7f7f7;
+	display:block;
+	height: 43px;
+	padding: 0 30px;
+	line-height: 43px;
+	text-decoration:none;
+}
+ul li a:hover{
+	color:#bdbdbd;
+	transition: 0.5s;
+}
+a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	transition: 0.5s;
+}
+.h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 32px;
+	color: #f7f7f7;
+}
+.p1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	color: #f7f7f7;
+}
+a .logo {
+	display: block;
+	height: 35px;
+	width: 35px;
+}
+div#logo{
+	background: url(images/2.png);
+	height: 32px;
+	width: 32px;
+	position: relative;
+	bottom: -4px;
+	transition: all 0.5s ease;
+}
+div#logo:hover {
+	background: url(images/3.png);
+	transition: all 0.5s ease;
+}
+a.tocomein{
+    font-size: 25px;
+
+}
+a.tocomein:hover {
+    box-shadow: inset 0 0 0 2px #000000;
+}
+a.checkin:hover {
+    box-shadow: inset 0 0 0 2px #000000;
+}
+.gs1 {
+	background: url(images/gs2.png);
+	position: relative;
+	width:100%;
+	height:750px;
+	max-width: 100%
+	background-position: center 10%;
+	background-size: cover;
+}
+.gs2 {
+	background: url(images/gss1.png);
+	position: relative;
+	width:100%;
+	height:400px;
+	max-width: 100%
+	background-position: center 10%;
+	background-size: cover;
+}
+a.reg {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	color:#fff;
+	transition: all 0.5s ease;
+	text-decoration: none;
+	width: 225px;
+	height: 32px;
+	text-align: center;
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+}
+a.reg:hover {
+	box-shadow: inset 0 0 0 2px #a7a7a7;
+	color:#a7a7a7;
+	transition: all 0.5s ease;
+}
+
+.signup{
+	position:relative; 
+	top: 20px;
+}
+p.login {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+input[type="text"], input[type="password"],input[type="email"] {
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    background: #202020;
+    color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #2c2c2c;
+}
+::-webkit-input-placeholder {color:#2b2b2b;}
+::-moz-placeholder          {color:#2b2b2b;}
+:-moz-placeholder           {color:#2b2b2b;}
+:-ms-input-placeholder      {color:#2b2b2b;}
+
+.signup1 {
+    position:relative; 
+	text-align: center;
+}
+div.login {
+	position: relative;
+	width: 350px;
+	height: 400px;
+	background: #fefbfb;
+	border-radius: 4px;
+	top:60px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #e3e1e1;
+}
+.do_login {
+
+}
+/* Стили модального окна */
+.modal-header h2 {
+    color: #cdcccc;  
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1;    
+    margin: 0;
+}
+/* кнопка закрытия окна */
+.modal .btn-close {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.modal .btn-close:hover {
+    color: #f9544c;
+}
+/* слой затемнения */
+.modal-wrap:before {
+    content: "";
+    display: none;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+}
+.modal-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 102;
+}
+/* активация слоя затемнения и модального блока */
+.modal-open:checked ~ .modal-wrap:before,
+.modal-open:checked ~ .modal-wrap .modal-overlay {
+    display: block;
+}
+.modal-open:checked ~ .modal-wrap .modal-dialog {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+/* элементы модального окна */
+.modal-dialog {
+    background: #101010;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    width: 80%;
+    max-width: 500px;
+    left: 50%;
+    top: -100%;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-transform: translate(-50%, -500%);
+    -ms-transform: translate(-50%, -500%);
+    -o-transform: translate(-50%, -500%);
+    transform: translate(-50%, -500%);
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+    z-index: 103;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-body p {
+    margin: 0;
+}
+.modal-header,
+.modal-footer {
+    padding: 20px 20px;
+}
+.modal-header {
+    border-bottom: #f4f4f4 solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+.modal-footer {
+    border-top: #eaeaea solid 1px;
+    text-align: right;
+}
+/* адаптивные картинки в модальном блоке */
+.modal-body img { 
+    max-width: 100%;
+    height: auto;
+}
+/* кнопки */
+.btn {
+    border: #f7f7f7 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #f7f7f7; 
+    transition: all 0.5s ease;
+}
+.btn1 {
+    border: #f7f7f7 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    color: #f7f7f7; 
+    transition: all 0.5s ease;
+}
+.btn:hover, .btn:focus {
+    background: #f7f7f7;
+    color: #1a1a1a;
+    transition: all 0.5s ease;
+}
+.btn1:hover, .btn1:focus {
+    background: #f7f7f7;
+    color: #1a1a1a;
+    transition: all 0.5s ease;
+}
+
+button[type="submit"] {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color:#1a1a1a;
+	text-decoration: none;
+	width: 300px;
+	height: 32px;
+	text-align: center;
+	background-color: #f27430;
+    border-radius: 12px;
+    border: 1px solid #f27430;
+    padding: 3px 7px;
+    outline-color: #f27430;
+} 
+h2 {
+	font-family: 'Roboto', sans-serif;
+	color: #f7f7f7;
+}
+div.text-1{
+	position: relative;
+	text-align: center;
+	margin-left: 25%;
+	margin-right: 25%;
+	top: 250px;
+}
+div.chop {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 40%;
+}
+div.chit {
+	top: 60px;
+	position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.ima{
+    position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.gss1 {
+	width: 100%;
+	height: 500px;
+}
+div.team{
+	position: relative;
+	text-align: center;
+	background: url(images/team2.png);
+	width:100%;
+	height: 400px;
+	max-width: 100%
+	background-position: center 10%;
+	background-size: cover;
+}
+.team_text{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	top:50%;
+
+}
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	color: #f7f7f7;
+}
+p.italic {
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	color: #f7f7f7;
+}
+
+div.services{
+	height: 1000px;
+	max-width: 100%
+	background-position: center 10%;
+	background-size: cover;
+}
+.services_text_h2{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	top:10%;
+}
+span.services_text_p1{
+	position: relative;
+	width: 50%;
+	text-align: left;
+	padding: 3%;
+	transition: all 0.5s ease;
+	display: inline-block;
+	margin-left: 5%;
+	margin-top: 4%;
+}
+span.services_text_p1:hover
+{
+    box-shadow: inset 0 0 0 1px #f7f7f7;
+    transition: all 0.5s ease;
+    border-radius:10px;
+}
+div.services_img1{
+	position: absolute;
+	right: 5%;
+	background: url(images/service2.png);
+	height: 700px;
+	width: 500px;
+}
+input{
+	outline-color: #f27430;
+}
+p.left {
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;	 
+}
